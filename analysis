@@ -1,0 +1,13 @@
+library(tidyverse)
+library(ggplot2)
+
+lax_jfk_data<- read.csv("lax_to_jfk.csv")
+View(lax_jfk_data)
+
+class(lax_jfk_data$DepDelayMinutes)
+
+summarary_airline_delay<- lax_jfk_data %>%
+  group_by(Reporting_Airline) %>%
+  summarise(
+    mean= mean(ArrDelayMinutes, na.rm= TRUE),
+    std_dev= sd(ArrDelayMinutes, na.rm= TRUE))
