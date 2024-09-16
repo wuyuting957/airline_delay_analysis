@@ -1,6 +1,8 @@
 library(tidyverse)
 library(ggplot2)
 
+# i worked on RStudio and i already downloaded the lax_to_jfk.csv file to my computer.
+# i verify that i can view the file on RStusio.
 lax_jfk_data<- read.csv("lax_to_jfk.csv")
 View(lax_jfk_data)
 
